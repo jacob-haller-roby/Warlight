@@ -15,21 +15,29 @@
 //    For the full copyright and license information, please view the LICENSE
 //    file that was distributed with this source code.
 
-package specie.bot;
+package specie.move;
 
+import specie.main.Map;
 
-import java.util.ArrayList;
-
-import specie.main.Region;
-import specie.move.AttackTransferMove;
-import specie.move.PlaceArmiesMove;
-
-public interface Bot {
+public class MoveResult {
 	
-	public ArrayList<Region> getPreferredStartingRegions(BotState state, Long timeOut);
+	private final Move move;
+	private final Map map;
 	
-	public ArrayList<PlaceArmiesMove> getPlaceArmiesMoves(BotState state, Long timeOut);
+	public MoveResult(Move move, Map resultingMap)
+	{
+		this.move = move;
+		this.map = resultingMap;
+	}
 	
-	public ArrayList<AttackTransferMove> getAttackTransferMoves(BotState state, Long timeOut);
+	public Move getMove()
+	{
+		return this.move;
+	}
+	
+	public Map getMap()
+	{
+		return this.map;
+	}
 
 }

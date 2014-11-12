@@ -15,21 +15,26 @@
 //    For the full copyright and license information, please view the LICENSE
 //    file that was distributed with this source code.
 
-package specie.bot;
-
+package specie.main;
 
 import java.util.ArrayList;
 
-import specie.main.Region;
-import specie.move.AttackTransferMove;
-import specie.move.PlaceArmiesMove;
+import specie.move.Move;
 
-public interface Bot {
+public interface Robot {
 	
-	public ArrayList<Region> getPreferredStartingRegions(BotState state, Long timeOut);
+	public void setup(long timeOut);
 	
-	public ArrayList<PlaceArmiesMove> getPlaceArmiesMoves(BotState state, Long timeOut);
+	public void writeMove(Move move);
 	
-	public ArrayList<AttackTransferMove> getAttackTransferMoves(BotState state, Long timeOut);
+	public String getPreferredStartingArmies(long timeOut, ArrayList<Region> pickableRegions);
+	
+	public String getPlaceArmiesMoves(long timeOut);
+	
+	public String getAttackTransferMoves(long timeOut);
+	
+	public void writeInfo(String info);
+
+	public void addToDump(String dumpy);
 
 }

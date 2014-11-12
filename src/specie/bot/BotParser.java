@@ -17,13 +17,13 @@
 
 package specie.bot;
 
-import bot.*;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import main.Region;
-import move.PlaceArmiesMove;
-import move.AttackTransferMove;
+import specie.main.Region;
+import specie.move.PlaceArmiesMove;
+import specie.move.AttackTransferMove;
 
 public class BotParser {
 	
