@@ -17,12 +17,12 @@
 
 package specie.bot;
 
-import bot.*;
+
 import java.util.ArrayList;
 
-import main.Map;
-import main.Region;
-import main.SuperRegion;
+import specie.main.Map;
+import specie.main.Region;
+import specie.main.SuperRegion;
 
 public class BotState {
 	
