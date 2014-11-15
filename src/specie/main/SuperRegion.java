@@ -24,7 +24,7 @@ public class SuperRegion {
 	private int id;
 	private int armiesReward;
 	private LinkedList<Region> subRegions;
-	
+    
 	public SuperRegion(int id, int armiesReward)
 	{
 		this.id = id;
